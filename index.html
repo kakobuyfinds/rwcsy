@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#f7f3ed">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>ACBuy spreadsheet : catégories, tailles et photos QC</title>
+  <meta name="description" content="Explorez dix catégories sur HipoBuyFind et utilisez ce guide ACBuy spreadsheet en français pour comparer les tailles, examiner les photos QC et préparer un envoi.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="ACBuy spreadsheet : catégories, tailles et photos QC">
+  <meta property="og:description" content="Un guide en français pour parcourir les catégories et vérifier une fiche produit avant de commander.">
+  <meta name="twitter:card" content="summary">
+  <!--
+    Fichier : index.html
+    La première page de Bing n’a pas pu être vérifiée directement.
+    Dix domaines repérés par la recherche web « ACBuy spreadsheet »,
+    sans ordre de classement Bing : acbuy.net, acbuy.io, acbuy.site,
+    acbuy.fun, acbuy.vip, acbuy.store, acbuyspreadsheet.com,
+    acbuy-spreadsheet.org, allchina-buy.com, acbuy.dev.
+    Intentions relevées : navigation par catégorie, liens produits,
+    photos QC, choix des tailles et préparation de l’expédition.
+
+    Mots-clés secondaires : catalogue ACBuy par catégorie, chaussures ACBuy,
+    photos QC ACBuy, guide des tailles ACBuy, livraison ACBuy vers la France.
+  -->
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f3ed;
+      --card: #fffdf9;
+      --ink: #2d2027;
+      --muted: #665861;
+      --accent: #713044;
+      --accent-dark: #4d2030;
+      --line: #d9cbd2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    img { display: block; width: 100%; height: auto; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    :focus-visible { outline: 3px solid #145668; outline-offset: 4px; }
+    .wrap { width: min(72rem, calc(100% - 2.25rem)); margin-inline: auto; }
+    .masthead { border-bottom: 1px solid var(--line); }
+    .masthead .wrap {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: .6rem 1rem; flex-wrap: wrap; padding-block: .8rem;
+    }
+    .masthead p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .brand { font-weight: 750; }
+    h1, h2, h3 { line-height: 1.15; text-wrap: balance; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); letter-spacing: -.045em; margin: 0; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin: 0 0 .7rem; }
+    h3 { font-size: 1.15rem; margin: 0 0 .55rem; }
+    p { margin: 0 0 1rem; }
+    .hero {
+      display: grid; grid-template-columns: 1.25fr 1fr; align-items: center;
+      gap: clamp(1.2rem, 5vw, 4rem); padding-block: clamp(1.4rem, 6vw, 4rem);
+    }
+    .intro { max-width: 56ch; margin-top: 1rem; color: var(--muted); }
+    .primary {
+      display: inline-flex; align-items: center; min-height: 3rem; padding: .64rem 1rem;
+      background: var(--accent); color: white; border-radius: .5rem; font-weight: 700;
+      text-decoration: none;
+    }
+    .primary:hover { background: var(--accent-dark); }
+    figure { margin: 0; }
+    .hero img {
+      aspect-ratio: 4 / 3; object-fit: contain; background: #fff;
+      border: 1px solid var(--line); border-radius: 1rem;
+    }
+    figcaption { padding: .55rem .1rem; color: var(--muted); font-size: .88rem; }
+    .section { margin-bottom: 3rem; }
+    .categories, .examples, .articles {
+      display: grid; gap: .7rem; margin: 0; padding: 0; list-style: none;
+    }
+    .categories { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .categories a {
+      display: flex; align-items: center; min-height: 3.4rem; height: 100%;
+      padding: .55rem .8rem; border: 1px solid var(--line); border-radius: .45rem;
+      background: var(--card); font-weight: 680; text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+    .categories a:hover { background: #f0e3e9; text-decoration: underline; }
+    .articles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    article {
+      padding: clamp(.9rem, 3vw, 1.4rem); border-top: 3px solid var(--accent);
+      background: var(--card);
+    }
+    article ul { padding-left: 1.2rem; margin: 0; }
+    article li + li { margin-top: .55rem; }
+    .examples { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .examples img { aspect-ratio: 1; object-fit: contain; background: var(--card); border-radius: .45rem; }
+    details { padding: .85rem .15rem; border-top: 1px solid var(--line); }
+    details:last-of-type { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; font-weight: 700; min-height: 1.75rem; }
+    details p { margin: .5rem 0 .25rem; max-width: 72ch; }
+    footer { border-top: 1px solid var(--line); padding: 1.1rem 0; color: var(--muted); }
+    footer p { margin: 0; }
+    @media (max-width: 53rem) {
+      .categories { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 40rem) {
+      .hero, .articles { grid-template-columns: 1fr; }
+      .categories, .examples { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "ACBuy spreadsheet : catégories, tailles et photos QC",
+        "description": "Explorez dix catégories sur HipoBuyFind et utilisez ce guide ACBuy spreadsheet en français pour comparer les tailles, examiner les photos QC et préparer un envoi.",
+        "inLanguage": "fr",
+        "hasPart": { "@id": "#questions" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#questions",
+        "name": "Questions fréquentes",
+        "inLanguage": "fr",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qu’est-ce qu’un ACBuy spreadsheet ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "C’est un répertoire de liens produits, souvent classés par catégorie, qui sert à repérer des articles et à comparer leurs variantes. Les liens de ce guide ouvrent HipoBuyFind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment vérifier un lien produit avant de commander ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ouvrez la fiche et vérifiez la disponibilité, la référence et la variante sélectionnée. Si le lien est expiré, cherchez la même référence dans sa catégorie et comparez les caractéristiques."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Que montrent les photos QC ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les photos de contrôle qualité montrent l’état apparent d’un article photographié. Vérifiez qu’elles correspondent à votre variante. Elles ne suffisent pas à établir l’authenticité."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment choisir une taille sans essayer ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mesurez un vêtement qui vous va et comparez ses dimensions au tableau du vendeur. Pour les chaussures, mesurez les deux pieds et vérifiez quelle mesure le tableau utilise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Où vérifier les frais de livraison vers la France ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Consultez le devis d’expédition pour votre adresse et les dimensions du colis. Comparez le transport, le suivi et les frais d’importation éventuellement applicables avant de confirmer."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/rwcsy/">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <p>Guide d’achat indépendant</p>
+      <a class="brand" href="https://www.hipobuyfind.com">HipoBuyFind</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titre">
+      <div>
+        <h1 id="titre">ACBuy spreadsheet</h1>
+        <p class="intro">Un ACBuy spreadsheet sert à repérer des liens produits dans un répertoire organisé par catégorie. Commencez par le rayon qui vous intéresse, puis comparez la variante, les dimensions et les photos disponibles sur la fiche. Les catégories de ce guide ouvrent le catalogue HipoBuyFind.</p>
+        <a class="primary" href="https://www.hipobuyfind.com">Ouvrir le catalogue HipoBuyFind</a>
+      </div>
+      <figure>
+        <img
+          src="https://cdn.media.amplience.net/i/sportinglife/25457839_WHITE_0/Mens-Air-Force-1-07-Shoe-WHITE?%24default%24=&amp;fmt=auto&amp;w=640"
+          alt="Basket blanche Nike Air Force 1 ’07 à semelle blanche et logo latéral ton sur ton"
+          width="640" height="480" loading="eager" fetchpriority="high">
+        <figcaption>Nike Air Force 1 ’07, illustration du rayon chaussures.</figcaption>
+      </figure>
+    </section>
+
+    <nav class="section" aria-labelledby="titre-rayons">
+      <h2 id="titre-rayons">Parcourir les catégories</h2>
+      <ul class="categories">
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Chaussures</a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Sweats et pulls</a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts</a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Vestes</a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantalons et shorts</a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Casquettes et bonnets</a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html">Ensembles</a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Sous-vêtements</a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Maillots</a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" aria-labelledby="titre-guides">
+      <h2 id="titre-guides">Quatre vérifications avant de commander</h2>
+      <div class="articles">
+        <article>
+          <h3>Retrouver la bonne fiche produit</h3>
+          <p>Pour chercher des chaussures ACBuy ou parcourir un catalogue ACBuy par catégorie, partez de la référence du modèle et du coloris exact. Deux annonces peuvent utiliser la même photo et proposer des variantes différentes.</p>
+          <ul>
+            <li>Pour retrouver un article après un lien produit expiré, recherchez sa référence dans le rayon correspondant.</li>
+            <li>Vérifiez la disponibilité par taille et par coloris après avoir choisi la variante sur la fiche.</li>
+            <li>Si une fiche indique un lien Weidian, Taobao ou 1688, confrontez la référence de la fiche à celle de l’annonce source.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Comparer les mesures à plat</h3>
+          <p>Un guide des tailles ACBuy aide à lire les mesures. Pour décider entre deux tailles, utilisez le tableau du vendeur et mesurez une pièce dont la coupe vous convient.</p>
+          <ul>
+            <li><strong>Baskets.</strong> Pour choisir la pointure de sneakers, mesurez la longueur de vos deux pieds et utilisez la mesure du plus long. Vérifiez si le tableau indique la longueur du pied ou celle de la semelle intérieure.</li>
+            <li><strong>Sweat, t-shirt, veste ou maillot.</strong> Comparez la largeur de poitrine à plat, la longueur du vêtement et la longueur des manches. Pour choisir une taille de veste, mesurez-la avec une coupe adaptée aux couches que vous porterez dessous.</li>
+            <li><strong>Pantalon, ensemble ou sous-vêtement.</strong> Vérifiez la largeur de ceinture et la longueur d’entrejambe. Pour un ensemble, contrôlez les mesures des deux pièces et la possibilité de choisir deux tailles.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Lire les photos de contrôle qualité</h3>
+          <p>Lorsque des photos QC ACBuy sont disponibles, identifiez la référence, le coloris et la taille du produit photographié. Une photo d’entrepôt peut correspondre à une autre variante ou à un autre exemplaire.</p>
+          <ul>
+            <li><strong>Chaussures.</strong> Examinez les coutures des baskets, le profil de la semelle extérieure et la symétrie de la paire. Une photo avec une règle aide à lire la longueur de la semelle intérieure.</li>
+            <li><strong>Vêtements.</strong> Consultez la photo de l’étiquette de taille, la composition du textile et les gros plans des fermetures ou des broderies.</li>
+            <li><strong>Casquettes et bijoux.</strong> Vérifiez le tour de tête et le type de fermeture de la casquette. Pour un collier, regardez la longueur de chaîne, le fermoir et la matière indiquée sur la fiche.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Estimer le coût rendu à destination</h3>
+          <p>Pour estimer une livraison ACBuy vers la France, relevez le prix des articles, la devise et les frais affichés. Comparez les devis d’expédition pour la même adresse et le même contenu de colis.</p>
+          <ul>
+            <li>Vérifiez le poids réel et le poids volumétrique du colis, puis regardez lequel sert au calcul du tarif.</li>
+            <li>Comparez le suivi de l’envoi international, le délai annoncé et les conditions de regroupement des articles.</li>
+            <li>Contrôlez les éventuels frais à destination et les conditions de retour avant de confirmer l’envoi.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titre-illustrations">
+      <h2 id="titre-illustrations">Exemples de vêtements et d’accessoires</h2>
+      <p>Ces visuels illustrent les rayons. Pour connaître la disponibilité d’un article, consultez sa fiche dans le catalogue.</p>
+      <div class="examples">
+        <figure>
+          <img
+            src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1709890238/785345_XJGKJ_1070_003_100_0000_Light-cotton-jersey-t-shirt-with-gucci-print.jpg"
+            alt="T-shirt Gucci en jersey de coton avec imprimé sur le devant"
+            width="490" height="490" loading="lazy" decoding="async">
+          <figcaption>T-shirt en jersey Gucci</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-denim-cap--M5451M_PM1_Worn%20view.png?hei=420&amp;wid=420"
+            alt="Casquette Louis Vuitton en denim vert à motif Monogram, portée"
+            width="420" height="420" loading="lazy" decoding="async">
+          <figcaption>Casquette Monogram Louis Vuitton</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://assets.hermes.com/is/image/hermesproduct/%E3%82%AB%E3%83%AC-90-%E3%80%8A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AF%E9%9E%8D%E3%81%AE%E4%B8%AD%E3%81%AB%E3%80%8B--004204S%2001-flat-wm-3-0-0-800-800_g.jpg"
+            alt="Carré Hermès Tout est dans la selle, présenté à plat avec ses motifs équestres"
+            width="800" height="800" loading="lazy" decoding="async">
+          <figcaption>Carré de soie Hermès</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://assets.christiandior.com/is/image/diorprod/N3523WOMZID301_SBG_E01-1?%24r9x10_raw%24=&amp;bfc=on&amp;crop=0%2C0%2C4000%2C5000&amp;hei=500&amp;qlt=80&amp;scale=1&amp;wid=460"
+            alt="Collier Dior Clair D Lune avec motif CD"
+            width="460" height="500" loading="lazy" decoding="async">
+          <figcaption>Collier Clair D Lune Dior</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="questions" class="section" aria-labelledby="titre-faq">
+      <h2 id="titre-faq">Questions fréquentes</h2>
+      <details open>
+        <summary>Qu’est-ce qu’un ACBuy spreadsheet ?</summary>
+        <p>C’est un répertoire de liens produits, souvent classés par catégorie, qui sert à repérer des articles et à comparer leurs variantes. Les liens de ce guide ouvrent HipoBuyFind.</p>
+      </details>
+      <details>
+        <summary>Comment vérifier un lien produit avant de commander ?</summary>
+        <p>Ouvrez la fiche et vérifiez la disponibilité, la référence et la variante sélectionnée. Si le lien est expiré, cherchez la même référence dans sa catégorie et comparez les caractéristiques.</p>
+      </details>
+      <details>
+        <summary>Que montrent les photos QC ?</summary>
+        <p>Les photos de contrôle qualité montrent l’état apparent d’un article photographié. Vérifiez qu’elles correspondent à votre variante. Elles ne suffisent pas à établir l’authenticité.</p>
+      </details>
+      <details>
+        <summary>Comment choisir une taille sans essayer ?</summary>
+        <p>Mesurez un vêtement qui vous va et comparez ses dimensions au tableau du vendeur. Pour les chaussures, mesurez les deux pieds et vérifiez quelle mesure le tableau utilise.</p>
+      </details>
+      <details>
+        <summary>Où vérifier les frais de livraison vers la France ?</summary>
+        <p>Consultez le devis d’expédition pour votre adresse et les dimensions du colis. Comparez le transport, le suivi et les frais d’importation éventuellement applicables avant de confirmer.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="https://www.hipobuyfind.com">Accueil HipoBuyFind</a> · Guide indépendant. Les marques sont citées pour identifier les articles illustrés.</p>
+    </div>
+  </footer>
+</body>
+</html>
